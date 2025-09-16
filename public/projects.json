@@ -1,0 +1,23 @@
+[
+	{
+		"id": 1,
+		"title": "Portfolio Website",
+		"description": "Responsive personal site built with React, Tailwind, and Framer Motion.",
+		"link": "https://github.com/yourname/portfolio",
+		"tags": ["React", "Tailwind", "Motion"]
+	},
+	{
+		"id": 2,
+		"title": "UI Component Library",
+		"description": "Reusable React components with a11y and theming.",
+		"link": "https://github.com/yourname/ui-library",
+		"tags": ["React", "TypeScript", "Storybook"]
+	},
+	{
+		"id": 3,
+		"title": "API Explorer",
+		"description": "SPA to explore REST APIs with caching and optimistic UI.",
+		"link": "https://github.com/yourname/api-explorer",
+		"tags": ["React", "Vite", "SWR"]
+	}
+]

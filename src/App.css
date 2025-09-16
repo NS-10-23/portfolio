@@ -1,0 +1,49 @@
+ox ero hero  /* Minimal custom styles; most styling via Tailwind */
+.link-active {
+	@apply text-brand-600;
+}
+
+.morph-bg {
+	position: fixed;
+	inset: 0;
+	z-index: -20;
+	overflow: hidden;
+	pointer-events: none;
+}
+.morph-blob {
+	position: absolute;
+	filter: blur(60px);
+	opacity: 0.8;
+	animation: morph 18s ease-in-out infinite alternate;
+	will-change: transform, border-radius;
+}
+.morph-blob:nth-child(1) {
+	background: radial-gradient(closest-side, mediumorchid, transparent 70%);
+	width: 50vmin;
+	height: 50vmin;
+	left: -10vmin;
+	top: -10vmin;
+}
+.morph-blob:nth-child(2) {
+	background: radial-gradient(closest-side, hotpink, transparent 70%);
+	width: 55vmin;
+	height: 55vmin;
+	right: -15vmin;
+	top: 10vmin;
+	animation-delay: 3s;
+}
+.morph-blob:nth-child(3) {
+	background: radial-gradient(closest-side, dodgerblue, transparent 70%);
+	width: 60vmin;
+	height: 60vmin;
+	left: 20vmin;
+	bottom: -20vmin;
+	animation-delay: 6s;
+}
+@keyframes morph {
+	0% { transform: translate(0,0) scale(1) rotate(0deg); border-radius: 40% 60% 60% 40% / 40% 40% 60% 60%; }
+	25% { transform: translate(5%, -3%) scale(1.05) rotate(10deg); border-radius: 60% 40% 50% 50% / 50% 60% 40% 50%; }
+	50% { transform: translate(-3%, 6%) scale(0.95) rotate(-10deg); border-radius: 50% 50% 40% 60% / 60% 50% 50% 40%; }
+	75% { transform: translate(8%, 2%) scale(1.1) rotate(20deg); border-radius: 45% 55% 65% 35% / 35% 65% 45% 55%; }
+	100% { transform: translate(-4%, -5%) scale(1.02) rotate(-15deg); border-radius: 60% 40% 40% 60% / 55% 45% 65% 35%; }
+}
